@@ -140,4 +140,20 @@ public class MaxHeap {
             System.out.println(heapArr[i]);
         }
     }
+
+    /*
+    * function to do heap sort,
+    * this function will return maximum element from heap and then remove it from heap
+    * */
+    public int[] heapSort(){
+        int[] arr=new int[size];
+        int size=this.size;
+
+        for(int i=0;i<size;i++){
+            arr[i]=getMax();
+            pop();
+        }
+
+        return arr;
+    }
 }
